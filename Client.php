@@ -2,7 +2,11 @@
 require_once 'Creator/FruitCreator.php';
 require_once 'Product/AppleProduct.php';
 require_once 'Product/BananaProduct.php';
-		
+	
+/**
+ * 客户
+ */
+
 class Client 
 {
 	private $_fruitCreator;
@@ -11,16 +15,33 @@ class Client
 	{
 		$this->_fruitCreator = new FruitCreator();
 		$res = $this->_fruitCreator->doFactory(new AppleProduct());
-		echo $res;
+		return $res;
 	}
 
 	public function getBanana()
 	{
 		$this->_fruitCreator = new FruitCreator();
 		$res = $this->_fruitCreator->doFactory(new BananaProduct());
-		echo $res;
+		return $res;
 	}
 }
 
 $Client = new Client();
-$Client->getApple();
+
+echo "\n";
+echo "Jack: Hi give me an Apple!\n";
+echo "\n";
+echo "Product: " . $Client->getApple() . "\n";
+
+
+echo "\n";
+echo "Jack: Hi give me an Banana!\n";
+echo "\n";
+echo "Product: " . $Client->getApple() . "\n";
+echo "\n";
+
+
+
+
+
+
