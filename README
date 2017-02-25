@@ -11,3 +11,32 @@ A factory method example in PHP.
 	Helper-————帮助类
 	Client.php-客户
 
+调用：
+$Client = new Client();
+
+echo "\n";
+echo "Jack: Hi give me an Apple!\n";
+echo "\n";
+echo "Product: " . $Client->getApple() . "\n";
+
+结果:
+
+Jack: Hi give me an Apple!
+
+Product: I am apple!
+
+
+调用：
+$Client = new Client();
+
+echo "\n";
+echo "Jack: Hi give me an Banana!\n";
+echo "\n";
+echo "Product: " . $Client->getApple() . "\n";
+echo "\n";
+
+结果：
+
+Jack: Hi give me an Banana!
+
+Product: I am apple!
